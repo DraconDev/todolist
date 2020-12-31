@@ -10,7 +10,6 @@ function App() {
 	return (
 		<Box className="App">
 			<Navbar></Navbar>
-			hey
 			<Button>Hey</Button>
 			<List></List>
 		</Box>

@@ -7,14 +7,13 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import MenuIcon from "@material-ui/icons/Menu";
-import classes from "Navbar.module.css";
 
 interface Props {}
 
 function Navbar(props: Props) {
 	return (
 		<AppBar position="static">
-			<Toolbar>
+			{/* <Toolbar>
 				<IconButton
 					edge="start"
 					className={classes.menuButton}
@@ -27,7 +26,7 @@ function Navbar(props: Props) {
 					News
 				</Typography>
 				<Button color="inherit">Login</Button>
-			</Toolbar>
+			</Toolbar> */}
 		</AppBar>
 	);
 }
