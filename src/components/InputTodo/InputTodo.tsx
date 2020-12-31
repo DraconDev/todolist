@@ -11,10 +11,19 @@ function InputTodo(props: Props) {
 		setInput(event.target.value);
 	}
 
+	function handleAddtodo(todo) {
+		if (input.length > 0) {
+			props.addTodo(todo);
+			setInput("");
+		}
+	}
+
 	return (
 		<div>
 			<input value={input} type="text" onChange={handleChange} />
-			<Button variant="contained">Add todo</Button>
+			<Button variant="contained" onClick={() => handleAddtodo(input)}>
+				Add todo
+			</Button>
 		</div>
 	);
 }

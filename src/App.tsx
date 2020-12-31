@@ -9,9 +9,14 @@ import InputTodo from "./components/InputTodo/InputTodo";
 
 function App() {
 	const [todos, setTodos] = useState(["exercise", "eat"]);
+
+	function addTodo(todo) {
+		return setTodos([...todos, todo])
+	}
+
 	return (
 		<Box className="App">
-			<InputTodo></InputTodo>
+			<InputTodo addTodo={addTodo}></InputTodo>
 			<List todos={todos}></List>
 		</Box>
 	);
