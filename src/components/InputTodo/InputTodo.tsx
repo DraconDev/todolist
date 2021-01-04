@@ -1,19 +1,23 @@
 import { Button } from "@material-ui/core";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { addTodo } from "./../../redux/actions";
 
 interface Props {}
 
 function InputTodo(props: Props) {
 	const [input, setInput] = useState("test");
+	const dispatch = useDispatch();
 
 	function handleChange(event: any) {
 		event.preventDefault();
 		setInput(event.target.value);
 	}
 
-	function handleAddtodo(todo) {
+	function handleAddtodo(todo: any) {
 		if (input.length > 0) {
-			props.addTodo(todo);
+			// props.addTodo(todo);
+			dispatch(addTodo(todo));
 			setInput("");
 		}
 	}
