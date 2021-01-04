@@ -10,7 +10,7 @@ import InputTodo from "./components/InputTodo/InputTodo";
 function App() {
 	const [todos, setTodos] = useState(["exercise", "eat"]);
 
-	function addTodo(todo) {
+	function addTodo(todo: any) {
 		return setTodos([...todos, todo])
 	}
 
